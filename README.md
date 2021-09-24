@@ -16,12 +16,12 @@ In the follow.py file, it includes many conditions for following. At first, it g
 
 For unfollow.py, it also gives a basic instruction on how to unfollow a user. And in the specific code part, the api will get the screen name that you do not want to follow and destroy the relationship using api.destroy_friends(). And there is also a method the check all the followers that not follows back and unfollow them, too. In order to approach this goal, we use two for loops to filter users out, and then use api.destroy_friends() to unfollow.
 
-In the like.py file, it contains examples about how to like or unlike a tweet and how to get a user's like list. To like a tweet, using api.create_favorite() method; to unlike a tweet, using api.destroy_favorite() method. And to get a like list, we can use api.favorites() by providing a screen name.
+In the like.py file, it contains examples about how to like or unlike a tweet and how to get a user's like list. To like a tweet, using api.create_favorite() method; to unlike a tweet, using api.destroy_favorite() method. And to get a like list, we can use api.favorites() by providing a screen name. 
 
-Finally, block.py is pretty simply since it is similar with like.py. In order to get a user's block, use api.blocks() to get a list that contains the user's blocks. And just use for loop to print the list out.
+Finally, block.py is pretty simply since it is similar with like.py. In order to get a user's block, use api.blocks() to get a list that contains the user's blocks. And just use for loop to print the list out. Then a list of blocking user will come out. 
 
 ## Tweet Counts - recent or full-archive
-In count.py file, it contains to situation for rencent count and full-archive count. Full-archive count is easier because it does not need additonal information. Just use user.statues_count() to get the number that the user tweeted. For recent count, we can count by having a start time. To count by time, just use api.Cursor(......, since = 'start time') to get all tweets since that date. And we also can count recent tweets by content, just add one more condition, q = "things you want to search".
+In count.py file, it contains to situation for rencent count and full-archive count. Full-archive count is easier because it does not need additonal information. Just use user.statues_count() to get the number that the user tweeted. For recent count, we can count by having a start time. To count by time, just use api.Cursor(......, since = 'start time') to get all tweets since that date. And we also can count recent tweets by content, just add one more condition, q = "things you want to search". 
 
 ## Conclusion
 After exploring the Twitter API, I already have an idea about how to use API and how to use the specific libraries. It is amazing that we can use API to communicate with twitter, and I learn how the system works while I am using Twitter. And it is a good experience to have a basic understanding about modular design.
